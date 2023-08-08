@@ -4,24 +4,28 @@
     <meta charset="utf-8">
     <title>360&deg; Invitation</title>
     <meta name="description" content="360&deg; Image - A-Frame">
-    <script src="/aframe-master.js"></script>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <script src="aframe-master.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-sky src="/360img.jpg" rotation="0 -130 0"></a-sky>
 
-      <a-text font="kelsonsans"
-              value="Texto de prueba"
-              width="10"
-              position="-2.5 0.25 -3.5"
-              rotation="0 15 0">
+      <a-camera position="0 1 0" id="myCamera">
+        <a-cursor intersection-spawn="Event: click; mixin:voxel;"></a-cursor>
+      </a-camera>
+
+      <a-sky src="/360img.jpg" rotation="0 -130 0"></a-sky>
+      <!-- <a-sky color="#ccc"></a-sky> -->
+
+      <a-text class="link"
+        font="kelsonsans"
+        value="Texto de prueba aquí"
+        width="5"
+        position="-2.5 0.25 -3.5"
+        rotation="0 15 0">
       </a-text>
-      <a-text font="kelsonsans"
-              value="asdfghjkl"
-              width="10"
-              position="-2.5 1.25 -3.5"
-              rotation="0 15 0">
-      </a-text>
+
     </a-scene>
+    <script src="/app.js"></script>
   </body>
 </html>
