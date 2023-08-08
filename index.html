@@ -5,6 +5,8 @@
     <title>360&deg; Invitation</title>
     <meta name="description" content="360&deg; Image - A-Frame">
     <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <script src="aframe-master.js"></script>
   </head>
   <body>
@@ -14,16 +16,24 @@
         <a-cursor intersection-spawn="Event: click; mixin:voxel;"></a-cursor>
       </a-camera>
 
-      <a-sky src="/360img.jpg" rotation="0 -130 0"></a-sky>
+      <a-sky src="img/360img.jpg" rotation="0 -130 0"></a-sky>
       <!-- <a-sky color="#ccc"></a-sky> -->
 
-      <a-text class="link"
-        font="kelsonsans"
-        value="Texto de prueba aquí"
-        width="5"
-        position="-2.5 0.25 -3.5"
-        rotation="0 15 0">
-      </a-text>
+      <a-text
+        value="Te invito a mi fiesta"
+        position="-2 1.5 -3"
+        color="black"
+        scale="2 2 2"
+      ></a-text>
+
+      <a-image
+      class="ubicacion"
+      src="img/location.png"
+      width="1"
+      height="1"
+      position="0 3 -4"
+      rotation="0 0 0"
+    ></a-image>
 
     </a-scene>
     <script src="/app.js"></script>
