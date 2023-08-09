@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>360&deg; Invitation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="360&deg; Image - A-Frame">
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -10,8 +11,18 @@
     <script src="aframe-master.js"></script>
   </head>
   <body>
-    <a-scene>
 
+    <div class="black">
+      <div class="text">
+        <p>Invitación 360° <i class="fa-solid fa-face-surprise fa-2xl"></i><br>
+          Dirige el celular en todas direcciones <i class="fa-solid fa-arrows-up-down-left-right fa-2xl"></i><br>
+          Utiliza la mira para abrir la ubicación y confirmar tu asistencia <i class="fa-solid fa-crosshairs fa-2xl"></i>
+        </p>
+      </div>
+      <a class="listo">Listo</a>
+    </div>
+
+    <a-scene class="invitacion hide">
       <a-camera position="0 1 0" id="myCamera">
         <a-cursor intersection-spawn="Event: click; mixin:voxel;"></a-cursor>
       </a-camera>
@@ -23,7 +34,7 @@
       src="img/location.png"
       width=".9"
       height=".8"
-      position="3.1 .8 -4"
+      position="4 .2 -4"
       rotation="0 0 0">
       </a-image>
 
@@ -32,11 +43,11 @@
       src="img/whatsapp.png"
       width=".6"
       height=".6"
-      position="3.1 -.2 -4"
+      position="4 -.9 -4"
       rotation="0 0 0">
       </a-image>
-
     </a-scene>
+
     <script src="/app.js"></script>
   </body>
 </html>

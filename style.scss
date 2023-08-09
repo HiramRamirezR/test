@@ -1,4 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .link {
   font-family: 'Roboto', sans-serif;
   color: red;
+}
+
+.black {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  .text {
+    width: 80%;
+    line-height: 30px;
+  }
+  a{
+    margin: 50px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.hide {
+  display: none;
 }
